@@ -11,23 +11,23 @@ fun main() {
     val meloman = true;
     val melomanDiscountPercent = 1;
 
-    println("покупка - $priceRub рублей, $priceKop копеек ->");
+    println("РїРѕРєСѓРїРєР° - $priceRub СЂСѓР±Р»РµР№, $priceKop РєРѕРїРµРµРє ->");
     if (priceRub >= minPrice) {
         priceRub -= minDiscount;
-        println("после применения $minDiscount рублевой скидки - $priceRub рублей, $priceKop копеек");
+        println("РїРѕСЃР»Рµ РїСЂРёРјРµРЅРµРЅРёСЏ $minDiscount СЂСѓР±Р»РµРІРѕР№ СЃРєРёРґРєРё - $priceRub СЂСѓР±Р»РµР№, $priceKop РєРѕРїРµРµРє");
     }
     if (priceRub >= maxPrice) {
         priceKop += priceRub * 100;
         priceKop -= priceKop * maxDiscountPercent / 100;
         priceRub = priceKop / 100;
         priceKop %= 100;
-        println("после применения $maxDiscountPercent% скидки - $priceRub рублей, $priceKop копеек");
+        println("РїРѕСЃР»Рµ РїСЂРёРјРµРЅРµРЅРёСЏ $maxDiscountPercent% СЃРєРёРґРєРё - $priceRub СЂСѓР±Р»РµР№, $priceKop РєРѕРїРµРµРє");
     }
     if (meloman) {
         priceKop += priceRub * 100;
         priceKop -= priceKop * melomanDiscountPercent / 100;
         priceRub = priceKop / 100;
         priceKop %= 100;
-        println("после применения $melomanDiscountPercent% скидки - $priceRub рублей, $priceKop копеек");
+        println("РїРѕСЃР»Рµ РїСЂРёРјРµРЅРµРЅРёСЏ $melomanDiscountPercent% СЃРєРёРґРєРё - $priceRub СЂСѓР±Р»РµР№, $priceKop РєРѕРїРµРµРє");
     }
 }
